@@ -9,20 +9,33 @@ Simple async spy helper
 ## Usage
 
 ```javascript
-var spyThen = require('spy-then')(options)
+var spyThen = require('spy-then')(optionalOptions)
 
 var makeSpy = spyThen(function() {
   console.log('ready')
-})
+}, optionalOptions)
 
 spyA = makeSpy('foo')
 spyB = makeSpy('bar')
 
 spyB('foo') // -> nothing happens
-spyB('bar') // -> done will be called
+spyB('bar') // -> console.log('ready') will be called
 ```
 
-## Todo
+## Options
+
+You can either initialize the library with options or you can give them to each
+spy-maker individually.
+
+Possible options are
+
+* `options.argCheck`: should be a function that gets two arguments, first one is
+  the expected argument, second one is the actual. You can feed those to your
+  assertions library
+* `options.allowMultipleCalls`: should be true, if multiple calls of a spy are
+  allowed
+
+## Todo/Ideas
 
 ### Expect callCount
 
@@ -34,8 +47,8 @@ spyA = makeSpy({
 })
 ```
 
-## options
+## more options
 
-* minCallCount
-* maxCallCount
+* `minCallCount`
+* `maxCallCount`
 
