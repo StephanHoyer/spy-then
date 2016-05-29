@@ -1,0 +1,26 @@
+{
+  "name": "spy-then",
+  "version": "1.0.0",
+  "description": "Simple async spy helper ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephanHoyer/spy-then.git"
+  },
+  "keywords": [
+    "spy",
+    "async"
+  ],
+  "author": "Stephan Hoyer <ste.hoyer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StephanHoyer/spy-then/issues"
+  },
+  "homepage": "https://github.com/StephanHoyer/spy-then#readme",
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
+}
